@@ -1,0 +1,9 @@
+﻿@model List<string>
+
+    <H1>Logged URLs: </H1>
+    <ul>
+    @foreach (string url in @Model)
+    {
+        <li>@url</li>
+    }
+</ul>
