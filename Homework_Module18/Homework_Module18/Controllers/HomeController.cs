@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Homework_Module18.Models;
 
 namespace Homework_Module18.Controllers;
-
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -12,12 +11,10 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
     public IActionResult Index()
     {
         return View();
     }
-
     public IActionResult Privacy()
     {
         return View();

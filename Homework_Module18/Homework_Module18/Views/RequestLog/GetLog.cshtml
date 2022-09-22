@@ -1,0 +1,7 @@
+﻿@model UrlLogger
+<ul>
+    @foreach(var item in Model.GetLoggedUrls())
+    {
+        <li>@($"{item}")</li>
+    }
+</ul>
