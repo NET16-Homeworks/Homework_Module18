@@ -1,4 +1,4 @@
-﻿namespace Homework_Module18
+﻿namespace Homework_Module18.LogService
 {
     public class RequestInfo
     {

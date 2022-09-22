@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-
-namespace Homework_Module18
+﻿namespace Homework_Module18.LogService
 {
     public class UrlLogger
     {
@@ -10,7 +7,7 @@ namespace Homework_Module18
         {
             var @enum = GetEnumerable();
             List<string> listOfStrings = new List<string>();
-            foreach(var request in @enum)
+            foreach (var request in @enum)
             {
                 listOfStrings.Add(request);
             }
@@ -18,7 +15,7 @@ namespace Homework_Module18
         }
         private IEnumerable<string> GetEnumerable()
         {
-            foreach(var request in _loggedRequests)
+            foreach (var request in _loggedRequests)
             {
                 foreach (var item in request.Value)
                 {
@@ -28,7 +25,7 @@ namespace Homework_Module18
         }
         public void PutRequest(string controllerName, RequestInfo request)
         {
-            if(_loggedRequests.ContainsKey(controllerName))
+            if (_loggedRequests.ContainsKey(controllerName))
             {
                 _loggedRequests[controllerName].Add(request);
             }
