@@ -12,7 +12,7 @@ namespace Homework_Module18.Controllers
         public IActionResult GetLog()
         {
             UrlLogger urlLogger = new UrlLogger();
-            return View(urlLogger);
+            return View(urlLogger.GetLoggedUrls());
         }
 
     }
