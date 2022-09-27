@@ -1,0 +1,10 @@
+﻿@model List<string>
+<h1>History of your URLS:</h1>
+<ul>
+@{
+    foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+}
+</ul>
