@@ -10,23 +10,16 @@ namespace Homework_Module18.Filters
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            if (_requestInfo.isSuccessful)
-            {
-                if (context.Exception != null)
-                    {
-                        _requestInfo.isSuccessful = true;
-                        Console.WriteLine("Requst is successful");
-                    }
-            }
+            _requestInfo.IsSuccessful = context.Exception == null;
+            // second way:
+            // if (context.Exception == null)
+            //{
+            //    _requestInfo.IsSuccessful = true;
+                Console.WriteLine("Request is successful");
+            //}
+        }          
 
-            else
-            {
-                _requestInfo.isSuccessful = false;
-                Console.WriteLine("Request cannot be completed");
-            }
-        }
-
-        public void OnActionExecuting(ActionExecutingContext context)
+            public void OnActionExecuting(ActionExecutingContext context)
         {
             _urllogger.PutRequest(context.Controller.GetType().Name, _requestInfo);
             _requestInfo.Url = context.HttpContext.Request.Path;
