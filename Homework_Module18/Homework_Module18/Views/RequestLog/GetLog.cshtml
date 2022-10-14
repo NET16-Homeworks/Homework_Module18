@@ -1,0 +1,15 @@
+﻿@model List<string>
+
+    
+@{
+    ViewData["Title"] = "GetLog";
+}
+
+<h1>GetLog</h1>
+
+<ul>
+    @foreach (string url in @Model)
+    {
+        <li>@url</li>
+    }
+</ul>
