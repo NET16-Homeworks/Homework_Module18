@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1>GetUsers page</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var logger in Model)
+            {
+                <tr>
+                    <td>Url request: @logger</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
